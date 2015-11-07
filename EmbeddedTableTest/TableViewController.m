@@ -18,6 +18,7 @@
     [super viewDidLoad];
     [self.tableView registerClass:[UITableViewCell class]
            forCellReuseIdentifier:NSStringFromClass([UITableViewCell class])];
+    self.tableView.contentInset = UIEdgeInsetsMake(-20, 0, 0, 0);
 }
 
 #pragma mark - Table view data source
