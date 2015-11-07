@@ -23,6 +23,7 @@
     UIViewController *sub = [[UIStoryboard storyboardWithName:@"Main" bundle:nil]
                              instantiateViewControllerWithIdentifier:NSStringFromClass([TableViewController class])];
 
+
     [self.contentView addSubview:sub.view];
     sub.view.translatesAutoresizingMaskIntoConstraints = NO;
     [sub.view.leadingAnchor constraintEqualToAnchor:self.contentView.leadingAnchor].active = YES;
@@ -32,6 +33,11 @@
     
     [self addChildViewController:sub];
     [sub didMoveToParentViewController:self];
+}
+
+- (IBAction)toggleVisibility:(id)sender {
+    TableViewController *tableVC = (TableViewController *)self.childViewControllers[0];
+    tableVC.isFirstSectionVisible = !tableVC.isFirstSectionVisible;
 }
 
 @end

@@ -20,9 +20,21 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aIS-4p-S4m" userLabel="Header">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="184"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XRj-wJ-oDd">
+                                        <rect key="frame" x="193" y="77" width="215" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="Toggle Visibility of First Section"/>
+                                        <connections>
+                                            <action selector="toggleVisibility:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C2I-ah-5jP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="0.51840173192771077" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="XRj-wJ-oDd" firstAttribute="centerX" secondItem="aIS-4p-S4m" secondAttribute="centerX" id="7zP-fT-Uqc"/>
+                                    <constraint firstItem="XRj-wJ-oDd" firstAttribute="centerY" secondItem="aIS-4p-S4m" secondAttribute="centerY" id="UbC-qn-Mjk"/>
                                     <constraint firstAttribute="height" constant="184" id="eO9-e5-7MP"/>
                                 </constraints>
                             </view>
@@ -53,19 +65,19 @@
             <point key="canvasLocation" x="333" y="337"/>
         </scene>
         <!--Table View Controller-->
-        <scene sceneID="9Yk-HL-Cjm">
+        <scene sceneID="jTg-fW-jh0">
             <objects>
-                <tableViewController storyboardIdentifier="TableViewController" automaticallyAdjustsScrollViewInsets="NO" id="8pg-8u-hKW" customClass="TableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="9zx-bf-xgN">
+                <tableViewController storyboardIdentifier="TableViewController" id="olQ-Cb-4Ck" customClass="TableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="CzF-rE-YTY">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="e0c-me-mYB">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="5rB-3Q-ZXd">
                                 <rect key="frame" x="0.0" y="50" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e0c-me-mYB" id="KUT-IA-Opz">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5rB-3Q-ZXd" id="LyG-qe-8aB">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
@@ -74,14 +86,14 @@
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="8pg-8u-hKW" id="jy7-p9-e4K"/>
-                            <outlet property="delegate" destination="8pg-8u-hKW" id="xMU-WD-TgH"/>
+                            <outlet property="dataSource" destination="olQ-Cb-4Ck" id="Sd9-pi-p6g"/>
+                            <outlet property="delegate" destination="olQ-Cb-4Ck" id="dPR-K3-DyF"/>
                         </connections>
                     </tableView>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fxt-XI-Zun" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Alg-xG-Fwg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="333" y="1046"/>
+            <point key="canvasLocation" x="338" y="1048"/>
         </scene>
     </scenes>
 </document>

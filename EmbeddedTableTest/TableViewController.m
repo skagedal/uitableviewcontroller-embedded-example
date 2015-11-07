@@ -30,10 +30,16 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    if (!self.isFirstSectionVisible) {
+        if (section == 0) return 0;
+    }
     return 2;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    if (!self.isFirstSectionVisible) {
+        if (section == 0) return nil;
+    }
     return @"Section";
 }
 
@@ -44,6 +50,28 @@
     
     cell.textLabel.text = @"Cell";
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    if (!self.isFirstSectionVisible) {
+        if (section == 0)
+            return 0.1;
+    }
+    return UITableViewAutomaticDimension;
+//    return 30.0;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    if (!self.isFirstSectionVisible) {
+        if (section == 0)
+            return 0.1;
+    }
+    return UITableViewAutomaticDimension;
+}
+
+- (void)setIsFirstSectionVisible:(BOOL)isFirstSectionVisible {
+    _isFirstSectionVisible = isFirstSectionVisible;
+    [self.tableView reloadData];
 }
 
 @end
