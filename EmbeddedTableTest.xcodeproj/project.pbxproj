@@ -13,6 +13,7 @@
 		F4644D191BEDD6CA007BA3C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4644D171BEDD6CA007BA3C4 /* Main.storyboard */; };
 		F4644D1B1BEDD6CA007BA3C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4644D1A1BEDD6CA007BA3C4 /* Assets.xcassets */; };
 		F4644D1E1BEDD6CA007BA3C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4644D1C1BEDD6CA007BA3C4 /* LaunchScreen.storyboard */; };
+		F4644D271BEDD712007BA3C4 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4644D261BEDD712007BA3C4 /* TableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		F4644D1A1BEDD6CA007BA3C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4644D1D1BEDD6CA007BA3C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4644D1F1BEDD6CA007BA3C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4644D251BEDD712007BA3C4 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		F4644D261BEDD712007BA3C4 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 				F4644D1C1BEDD6CA007BA3C4 /* LaunchScreen.storyboard */,
 				F4644D1F1BEDD6CA007BA3C4 /* Info.plist */,
 				F4644D0E1BEDD6CA007BA3C4 /* Supporting Files */,
+				F4644D251BEDD712007BA3C4 /* TableViewController.h */,
+				F4644D261BEDD712007BA3C4 /* TableViewController.m */,
 			);
 			path = EmbeddedTableTest;
 			sourceTree = "<group>";
@@ -152,6 +157,7 @@
 				F4644D161BEDD6CA007BA3C4 /* ViewController.m in Sources */,
 				F4644D131BEDD6CA007BA3C4 /* AppDelegate.m in Sources */,
 				F4644D101BEDD6CA007BA3C4 /* main.m in Sources */,
+				F4644D271BEDD712007BA3C4 /* TableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

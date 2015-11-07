@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "TableViewController.h"
 
 @interface ViewController ()
+
+@property (strong, nonatomic) IBOutlet UIView *contentView;
 
 @end
 
@@ -16,12 +19,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-}
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    UIViewController *sub = [[UIStoryboard storyboardWithName:@"Main" bundle:nil]
+                             instantiateViewControllerWithIdentifier:NSStringFromClass([TableViewController class])];
+
+    [self.contentView addSubview:sub.view];
+    sub.view.translatesAutoresizingMaskIntoConstraints = NO;
+    [sub.view.leadingAnchor constraintEqualToAnchor:self.contentView.leadingAnchor].active = YES;
+    [sub.view.trailingAnchor constraintEqualToAnchor:self.contentView.trailingAnchor].active = YES;
+    [sub.view.topAnchor constraintEqualToAnchor:self.contentView.topAnchor].active = YES;
+    [sub.view.bottomAnchor constraintEqualToAnchor:self.contentView.bottomAnchor].active = YES;
+    
+    [self addChildViewController:sub];
+    [sub didMoveToParentViewController:self];
 }
 
 @end
